@@ -1,0 +1,286 @@
+<html>
+<head>
+    <title>FoodYum</title>
+<style>
+#tagline{
+	font-family:Comic Sans MS, cursive, sans-serif;
+	font-size:24px;
+	color:#f39c12;
+	font-style:italic;
+    margin-left: 20px;
+}
+.navbar {
+    overflow: hidden;
+    background-color:   #2e86c1 ;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.navbar a {
+    float: left;
+    font-size: 28px;
+    color: white;
+    text-align: center;
+    padding: 18px 22px;
+    text-decoration: none;
+}
+.navbar-right {
+    float: right;
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 28px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 18px 22px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color:  #7f8c8d ;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+    
+    {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+    
+    
+/* Slideshow +container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+    #popularitems{
+        background: #2e86c1;
+        font-size: 30px;
+        color:  #ffffff;
+        margin: 20px;
+        padding: 20px;
+    }
+    
+    .footer{
+        background:  #808b96;
+    }
+    
+    
+</style>
+</head>
+<body>
+<div>       
+	<img src="img/logo.png" height="12%" width="15%" padding="50px" style="margin-bottom: 20px">
+	<text id="tagline">Wait Less, Eat More!</text>
+    <img src="img/home_user.png" align="right" height="8%" width="8%" padding="50px" style="margin: 20px">
+</div>
+<div class="navbar">
+  <a href="home.html">Home</a>
+  <a href="home.html">Update Menu</a>
+  <a href="home.html">Update Price</a> 
+  <a href="home.html">Special Offers</a> 
+  <a href="home.html">Feedback</a> 
+<div class="navbar-right">
+<a href="#news">Logout</a>
+    </div>
+</div>
+  
+<div></div>    
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="img/home_burgrill.png" style="width:100%">
+    <div class="text"><font color="white" size="24px">Bugrill!</font></div>
+</div>
+
+<div class="mySlides fade">
+  <img src="img/home_lapinnoz.png" width="100%" height="50%" >
+  <div class="text"><font color="white" size="24px">La Pinnoz!</font></div>
+</div>
+<div class="mySlides fade">
+  <img src="img/home_havmor.jpg" style="width:100%">
+  <div class="text"><font color="white" size="24px">Havmor!</font></div>
+</div>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 4000); 
+}
+</script>
+<div id="popularitems" style="margin-bottom: 10px">Popular Items</div>
+    
+<div align="center" style=" margin-bottom: 10px">
+  <img src="img/home_demo_item.png" height="300px" width="300px">
+    <text><b>Veg Burger</b></text> 
+    <text>Add</text> 
+
+    <img src="img/home_demo_item.png" height="300px" width="300px">
+    <text><b>Veg Burger</b></text> 
+    <text>Add</text> 
+    
+  <img src="img/home_demo_item.png" height="300px" width="300px">
+    <text><b>Veg Burger</b></text> 
+    <text>Add</text> 
+    </div>
+<div align="center" style="margin-bottom: 10px">
+    <img src="img/home_demo_item.png" height="300px" width="300px">
+    <text><b>Veg Burger</b></text> 
+    <text>Add</text> 
+    
+  <img src="img/home_demo_item.png" height="300px" width="300px">
+    <text><b>Veg Burger</b></text> 
+    <text>Add</text> 
+
+    <img src="img/home_demo_item.png" height="300px" width="300px">
+    <text><b>Veg Burger</b></text> 
+    <text>Add</text> 
+</div>
+    
+    <div class="footer">
+        <br><br>
+        <div align="center" >
+            Contact Us: &nbsp;&nbsp;&nbsp;
+        <img src="img/home_instagram.jpeg" height="50px" width="50px">
+        <img src="img/home_fb.png" height="50px" width="50px">
+        </div>  
+        <hr>
+        <div>
+            <ul type="none" style="display: inline-block; margin-left: 200px    "><b>About FoodYum</b>
+                <li>About Us</li>
+                <li>Contact Us</li>
+                <li><a style="text-decoration: none" href="https://www.google.com/maps?client=ubuntu&channel=fs&q=chitkara+university&oe=utf-8&um=1&ie=UTF-8&sa=X&ved=0ahUKEwj1grnn0oHdAhUFMI8KHcN0AOoQ_AUICigB">Location</a></li>
+            </ul>
+            <ul type="none" style="display: inline-block; margin-left: 200px"><b>For Foodies</b>
+                <li>Square One</li>
+                <li>Burgrill</li>
+                <li>La Pinnoz</li>
+                <li>Havmor</li>
+            </ul>
+        </div>
+        <br>
+         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; FoodYum. All rights reserved.
+    </div>
+    </body>
+</html>
+
