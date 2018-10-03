@@ -1,40 +1,62 @@
-const express = require('express');
-const path = require('path');
-const favicon = require('serve-favicon');
-const logger = require('morgan');
-const cookieParser = require('cookie-parser');
-const bodyParser = require('body-parser');
+var createError = require('http-errors');
+var express = require('express');
+var path = require('path');
+var cookieParser = require('cookie-parser');
+var lessMiddleware = require('less-middleware');
+var logger = require('morgan');
+var homeRouter = require('./routes/index');
+/* var homeRouter = require('./routes/home');
+var adminRouter = require('./routes/admin');
+var signupRouter = require('./routes/signup');
+var loginRouter = require('./routes/login');
+var dashboardRouter = require('./routes/dashboard');
+var menuRouter = require('./routes/menu');
+var burgrillRouter = require('./routes/menu/burgrill');
+var lapinozRouter = require('./routes/menu/lapinoz');
+var chainagriRouter = require('./routes/menu/chainagri');
+//var havmorRouter = require('./routes/havmor');
+var tqRouter = require('./routes/menu/tq');
+var sqoneRouter = require('./routes/menu/sqone');
+var cartRouter = require('./routes/cart');
+//var managerHomePageRouter = require('./routes/managerhomepage');
+var feedbackRouter = require('./routes/feedback');
+var profileRouter = require('./routes/profile'); */
 
-//const index = require('./app_server/routes/index');
-const users = require('./app_server/routes/register');
-const home  = require('./app_server/routes/home');
-const login  = require('./app_server/routes/login');
-const register = require('./app_server/routes/register');
-const app = express();
+var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'app_server', 'views'));
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-// uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(lessMiddleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
-
-app.use('/', home);
-app.use('/cu', users);
-app.use('/login',login);
-app.use('/register',register);
-//app.use('/chitkara', chitkara);
+app.use('/', homeRouter);
+/* 
+app.use('/', homeRouter);
+app.use('/home', homeRouter);
+app.use('/admin', adminRouter);
+app.use('/signup', signupRouter);
+app.use('/login', loginRouter);
+app.use('/dashboard', dashboardRouter);
+app.use('/menu', menuRouter);
+app.use('/menu/burgrill', burgrillRouter);
+app.use('/menu/lapinoz', lapinozRouter);
+app.use('/menu/chainagri', chainagriRouter);
+//app.use('/menu/havmor', havmorRouter);
+app.use('/menu/tq', tqRouter);
+app.use('/menu/sqone', sqoneRouter);
+app.use('/cart', cartRouter);
+//app.use('/managerhomepage', managerHomePageRouter);
+app.use('/feedback', feedbackRouter);
+app.use('/profile', profileRouter); */
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  const err = new Error('Not Found');
-  err.status = 404;
-  next(err);
+  next(createError(404));
 });
 
 // error handler
