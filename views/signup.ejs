@@ -64,12 +64,12 @@
 			<section style="background:url(img/bg3.jpg);background-repeat:no-repeat;background-size:cover;"class="reservation-area section-gap relative">
                               <div class="jumbotron">
 				<h2 id="sign-up">Sign Up</h2>
-				<form style="margin-top: 25px; margin-bottom: 25px">
+				<form style="margin-top: 25px; margin-bottom: 25px" method="post" action="/signup">
 					<div class="form-group row required">
 						<div class="col-sm-2"></div>
-						<label for="Name" class="col-sm-3 col-form-label">Username</label>
+						<label for="Name" class="col-sm-3 col-form-label">Name</label>
 						<div class="col-sm-5">
-							<input type="text" class="form-control" id="username" placeholder="Name">
+							<input type="text" class="form-control" id="userName" name="userName" placeholder="Name">
 						</div>
 						<div class="col-sm-2"></div>
 
@@ -78,18 +78,18 @@
 
 					<div class="form-group row required">
 						<div class="col-sm-2"></div>
-						<label for="RollNum" class="col-sm-3 col-form-label">Roll Number</label>
+						<label for="RollNum" class="col-sm-3 col-form-label">Roll No</label>
 						<div class="col-sm-5">
-							<input type="text" class="form-control" id="rollnum" placeholder="Roll Number">
+							<input type="number" class="form-control" id="rollNo" name="rollNo" placeholder="Roll Number">
 						</div>
 						<div class="col-sm-2"></div>
 					</div>
 
 					<div class="form-group row required">
 						<div class="col-sm-2"></div>
-						<label for="Email" class="col-sm-3 col-form-label">Email</label>
+						<label for="PhoneNo" class="col-sm-3 col-form-label">Phone No</label>
 						<div class="col-sm-5">
-							<input type="email" class="form-control" id="email" placeholder="Email">
+							<input type="number" class="form-control" id="phoneNo" name="phoneNo" placeholder="Phone no">
 						</div>
 						<div class="col-sm-2"></div>
 					</div>
@@ -98,7 +98,7 @@
 						<div class="col-sm-2"></div>
 						<label for="password"  class="col-sm-3 col-form-label">Password</label>
 						<div class="col-sm-5">
-							<input type="password" class="form-control" id="password" placeholder="Password">
+							<input type="text" class="form-control" id="password" name="password" placeholder="Password">
 						</div>
 						<div class="col-sm-2"></div>
 					</div>
@@ -107,12 +107,12 @@
 						<div class="col-sm-2"></div>
 						<label for="retype_password"  class="col-sm-3 col-form-label">Retype Password</label>
 						<div class="col-sm-5">
-							<input type="password" class="form-control" id="check_password" placeholder="Retype Password">
+							<input type="text" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Retype Password">
 						</div>
 						<div class="col-sm-2"></div>
 					</div>
 
-					<button id="btnSignIn" class="btn btn-lg btn-primary btn-block" type="submit" style="margin-left: auto; margin-right: auto; width: 50%; background-color:red;">Sign In</button>
+					<button id="btnSignIn" class="btn btn-lg btn-primary btn-block" type="submit" style="margin-left: auto; margin-right: auto; width: 50%; background-color:red;">Sign Up</button>
 
 				</form>
 
