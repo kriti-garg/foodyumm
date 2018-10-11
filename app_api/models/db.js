@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 //let dbURI = 'mongodb://localhost:27017/chitkara';
 //let dbURI = 'mongodb://rtpl:rtpl@ds231991.mlab.com:31991/heroku_k9ps01l6';
-//let dbURI = 'mongodb://foodyum:foodyum1@ds121673.mlab.com:21673/foodyum';
 let dbURI = 'mongodb://foodyum3:foodyum3@ds223343.mlab.com:23343/foodyum3';
 if (process.env.NODE_ENV === 'production') {
   dbURI = process.env.MONGODB_URI;
@@ -45,3 +44,4 @@ process.on('SIGTERM', () => {
 });
 
 require('./users');
+require('./menu');

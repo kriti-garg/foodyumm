@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+	<html lang="zxx" class="no-js">
+	<head>
+		<!-- Mobile Specific Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Favicon-->
+		<link rel="shortcut icon" href="img/fav.png">
+		<!-- Author Meta -->
+		<meta name="author" content="colorlib">
+		<!-- Meta Description -->
+		<meta name="description" content="">
+		<!-- Meta Keyword -->
+		<meta name="keywords" content="">
+		<!-- meta character set -->
+		<meta charset="UTF-8">
+		<!-- Site Title -->
+		<title>FoodYum</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+			<!--
+			CSS
+			============================================= -->
+<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+			<link rel="stylesheet" href="css/linearicons.css">
+			<link rel="stylesheet" href="css/font-awesome.min.css">
+			<link rel="stylesheet" href="css/bootstrap.css">
+			<link rel="stylesheet" href="css/magnific-popup.css">
+			<link rel="stylesheet" href="css/jquery-ui.css">				
+			<link rel="stylesheet" href="css/nice-select.css">							
+			<link rel="stylesheet" href="css/animate.min.css">
+			<link rel="stylesheet" href="css/owl.carousel.css">
+ <link href="css/style.css" rel="stylesheet">			
+			<link rel="stylesheet" href="css/main.css">
+		</head>
+		<body style="background:url(img/bg3.jpg);background-repeat:no-repeat;background-size:cover;">	
+			<header id="header">
+				<div class="header-top">
+					<div class="container">
+				  		<div class="row justify-content-center">
+						      <div id="logo">
+						        <h3 style="color:white"> FoodYum </h3>
+						      </div>
+				  		</div>			  					
+					</div>
+				</div>
+				<div class="container main-menu">
+					<div class="row align-items-center justify-content-center d-flex">			
+				      <nav id="nav-menu-container">
+				        <ul class="nav-menu">
+				         
+				         <!-- <li><a href="about.html">About</a></li> -->
+				          <li><a href="#update">Update Menu</a></li>
+				          <li><a href="#feedback">View Feedback</a></li>
+				         				         		          		          
+				          
+				        </ul>
+
+				      </nav><!-- #nav-menu-container -->					      		  
+					</div>
+				</div>
+			</header><!-- #header -->
+
+<div id="update" style="margin-top:15%;margin-left:10%;margin-right:10%; background-color:white;border: 5px solid white;padding:  0em 1em;
+    border-radius: 20px;box-shadow: 10px 10px grey;">
+<div class="menu-upload-form">
+		<form style="margin-top: 25px; margin-bottom: 25px" method="POST" action="/manager">
+			<div class="form-group row required">
+				<div class="col-sm-2"></div>
+				<label for="Name" class="col-sm-3 col-form-label">Item Id</label>
+				<div class="col-sm-5">
+					<input type="text" class="form-control" id="itemId" name="itemId" placeholder="itemId">
+				</div>
+				<div class="col-sm-2"></div>
+
+				<!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+			</div>
+
+			<div class="form-group row required">
+				<div class="col-sm-2"></div>
+				<label for="RollNum" class="col-sm-3 col-form-label">Item Name</label>
+				<div class="col-sm-5">
+					<input type="text" class="form-control" id="itemName" name="itemName" placeholder="ItemName">
+				</div>
+				<div class="col-sm-2"></div>
+			</div>
+
+			<div class="form-group row required">
+				<div class="col-sm-2"></div>
+				<label for="Email" class="col-sm-3 col-form-label">Franchise Name</label>
+				<div style="background-color: white;color:gray;"class="form-select" class="col-sm-5">
+					<select style="background-color: white;color:gray;" class="form-control" id="franchiseName" name="franchiseName" >
+						<option style="background-color: white;color:gray;" value="Burgrill">Burgrill</option>
+						<option style="background-color: white;color:gray;"value="LapinoZ">LapinoZ</option>
+						<option style="background-color: white;color:gray;" value="TQ">TQ</option>
+						<option style="background-color: white;color:gray;"value="SqOne">SqOne</option>
+						</select>
+				</div>
+				<div class="col-sm-2"></div>
+			</div>
+
+			<div class="form-group row required">
+				<div class="col-sm-2"></div>
+				<label for="PhoneNo" class="col-sm-3 col-form-label">Item Type</label>
+				<div class="col-sm-5">
+					<input type="text" class="form-control" id="itemType" name="itemType" placeholder="Item Type">
+				</div>
+				<div class="col-sm-2"></div>
+			</div>
+
+			<div class="form-group row required">
+				<div class="col-sm-2"></div>
+				<label for="password"  class="col-sm-3 col-form-label">Item Price</label>
+				<div class="col-sm-5">
+					<input type="number" class="form-control" id="itemPrice" name="itemPrice" placeholder="Item Price">
+				</div>
+				<div class="col-sm-2"></div>
+			</div>
+
+			<button id="btnSignIn" class="btn btn-lg btn-primary btn-block" type="submit" style="margin-left: auto; margin-right: auto; width: 50%; background-color:red;">Update</button>
+
+									</div>
+
+
+</div>
+
+<div id="feedback" style="margin-top:5%;margin-bottom:5%;margin-left:10%;margin-right:10%; background-color:white;border: 5px solid white;padding:  0em 1em;border-radius: 20px;box-shadow: 10px 10px grey;">
+
+<div class="recent-meaasge">
+									<div class="media">
+										<div class="media-left">
+											<a href="#"><img class="media-object" src="assets/images/avatar/1.jpg" alt="..."></a>
+										</div>
+										<div class="media-body">
+											<h5 class="media-heading">Saiful Islam</h5>
+											<div class="meaasge-date">15 minutes Ago</div>
+											<p>We are happy about your service </p>
+										</div>
+									</div>
+									<div class="media">
+										<div class="media-left">
+											<a href="#"><img class="media-object" src="assets/images/avatar/2.jpg" alt="..."></a>
+										</div>
+										<div class="media-body">
+											<h5 class="media-heading">Ishrat Jahan</h5>
+											<div class="meaasge-date">40 minutes ago</div>
+											<p>Quick service and good serve </p>
+										</div>
+									</div>
+									<div class="media">
+										<div class="media-left">
+											<a href="#"><img class="media-object" src="assets/images/avatar/3.jpg" alt="..."></a>
+										</div>
+										<div class="media-body">
+											<h5 class="media-heading">Mr. Saifun</h5>
+											<div class="meaasge-date">1 hour ago</div>
+											<p>Really tasty reciepe </p>
+										</div>
+									</div>
+									<div class="media">
+										<div class="media-left">
+											<a href="#"><img class="media-object" src="assets/images/avatar/3.jpg" alt="..."></a>
+										</div>
+										<div class="media-body">
+											<h5 class="media-heading">Mr. Saifun</h5>
+											<div class="meaasge-date">1 minutes ago</div>
+											<p>We like your birthday cake </p>
+										</div>
+									</div>
+									<div class="media no-border">
+										<div class="media-left">
+											<a href="#"><img class="media-object" src="assets/images/avatar/2.jpg" alt="..."></a>
+										</div>
+										<div class="media-body">
+											<h5 class="media-heading">Ishrat Jahan</h5>
+											<div class="meaasge-date">40 minutes ago</div>
+											<p>Quick service and good serve </p>
+										</div>
+									</div>
+								</div>
+							</div><!-- /# card -->
+						</div><!-- /# column -->
+
+
+</div>
+
+
+<script src="js/vendor/jquery-2.2.4.min.js"></script>
+			<script src="js/popper.min.js"></script>
+			<script src="js/vendor/bootstrap.min.js"></script>			
+			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>		
+ 			<script src="js/jquery-ui.js"></script>					
+  			<script src="js/easing.min.js"></script>			
+			<script src="js/hoverIntent.js"></script>
+			<script src="js/superfish.min.js"></script>	
+			<script src="js/jquery.ajaxchimp.min.js"></script>
+			<script src="js/jquery.magnific-popup.min.js"></script>						
+			<script src="js/jquery.nice-select.min.js"></script>					
+			<script src="js/owl.carousel.min.js"></script>			
+            <script src="js/isotope.pkgd.min.js"></script>								
+			<script src="js/mail-script.js"></script>	
+			<script src="js/main.js"></script> 
+</body>
+</html>
+                                
+		
+
+
+
+
+

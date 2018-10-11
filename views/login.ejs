@@ -67,12 +67,12 @@
 						<div class="jumbotron">
 				<h2 id="sign-up">Log In</h2>
 
-				<form style="margin-top: 25px; margin-bottom: 25px">
+				<form style="margin-top: 25px; margin-bottom: 25px" method="POST" action="/home">
 					<div class="form-group row required">
 						<div class="col-sm-2"></div>
 						<label for="Email" class="col-sm-3 col-form-label">Email</label>
 						<div class="col-sm-5">
-							<input type="email" class="form-control" id="email" placeholder="Email">
+							<input type="email" class="form-control" id="email" name="email" placeholder="Email">
 						</div>
 						<div class="col-sm-2"></div>
 					</div>
@@ -81,11 +81,12 @@
 						<div class="col-sm-2"></div>
 						<label for="password"  class="col-sm-3 col-form-label">Password</label>
 						<div class="col-sm-5">
-							<input type="password" class="form-control" id="password" placeholder="Password">
+							<input type="password" class="form-control" id="password" name="password" placeholder="Password">
 						</div>
 						<div class="col-sm-2"></div>
 					</div>
-<button id="btnSignIn" class="btn btn-lg btn-primary btn-block" type="submit" style="margin-left: auto; margin-right: auto; width: 15%; background-color:red;">Log In</button>
+<button id="btnSignIn" class="btn btn-lg btn-primary btn-block" type="submit" style="margin-left: auto; margin-right: auto; width: 15%; background-color:red;">LOG IN</button>
+
 
 				</form>
 				<p>
